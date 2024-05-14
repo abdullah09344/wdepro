@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MOTOMARKET</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png.png" width="190px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                   
+                    <li><a href="Product.html">Product</a></li>
+                    <li><a href="offer.html">Offer</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="cart.png.png" width="30px" height="30px">
+            <img src="menu.png.png" class="menu-icon"
+            onclick="menutoggle()">  
+        </div>
+        </div>
+    </div>
+</div>
+            <div class="row sasuke">
+                <h2>All Product</h2>
+                <select>
+                    <option>Default Shorting</option>
+                    <option>Short by price</option>
+                    <option>Short by popularity</option>
+                    <option>Short by rating</option>
+                    <option>Short by sale</option>
+                </select>
+            </div>
+            <h2 class="naruto">BIKES</h2>
+<div class="row">
+    <div class="col-4">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhMVFhUXFhYZGBgYGBgaGxgYGxgWGR0dHhgfHSghGh4lHRUVITEhJiorLi4uHR82ODMsNygtLisBCgoKDg0OFg8QFTcdHhkrNi0tKy4tLzc3KysrLS0rLSstKy4rMCsrLS0rKysrMSsrLS8rNzcrKys3NzIrLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABFEAACAAQDBQUFBgMGBQUBAAABAgADBBESITEFBhNBUQciYXGBFDKRocEjQlJisdEzcpJDU4Ki4fAXRFSTshUWY9LxCP/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAJhEBAAIBBAAEBwAAAAAAAAAAAAECEQMSITEEUXHhBRMUIkFhcv/aAAwDAQACEQMRAD8AvGEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEIQCEI6ayqSUjTJjBUUEsx0AgO6EazYm3ZNUCZLXtqDrY6HyMbOAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhHRV1cuUMUx1QdWIH66wHfCI1K3+2azFBWSsSkggnDmPO1/SMv/3ZQ5n2qSANSXAA9TlAbqEdNLVJMUPLdXU6MrBgfUZR3QCEIQCKd7Vt6xNnGilt3ZJBmjMFplrgW5qoIPiT4RcUU72l9k86pqXrqOYDMcqzSXOG5VVXuPpmFGRtzzgNTsbaryGQBuHMT+G3I9Vbqp6fWLh3b26lXLxAYZi5TJZ1Rvqp1B5j1jzkdoTFdpU9ScDFTf3lINs+sSzdjbjy5izZTAuuWZymJzlv06g8jFRfEIie3d+5EijSqHe4jhFQmxD54g34cNjf06xt929uJVyRNTI3sy3vY668wQQQYitrCEIBCEIBET33pNosjNRTkwlbNLKd7zV1YG/r8YlkIDzyu+O0qclJvEJXIkTCDf8Alb942tD2szAcLzWQ9JqAf5rfWLT3j3SpqwEuuGZawmLk2Wl+TDwPyip9v7m1dLdTheSDdTYNKNzzRv4ZJ5aHqdINYiY47Sqj7Q5zC68Fx1AP0aNtsrfrFMCz0VFOWIE5Hle/LxihdrUjJNLrK4GQylFlAIAF7eJzz6wl7wVKC2ITB+Yd746H5RWeXq8G+kfYpLs67VURlpqq6oTYMf7M9D+X9IutHBAIIIOYI0IiDlCEIBHxmAFzkI+xG95aN6iYklZ0xEtd1QhcXS7WxD/CRAYe8m+0uS3ClkGYdAAWY/yyxmfM5RSe9e8bVMxrS3xXIZ3Y4sjmAoNlHgIumTsKRIBWWgzNyep6k6k+JJMVjvd2cNdptE5OpMpmz/wtz8j8YqIIlO34T6CO5NnzDpLb4H6ZfKNbO48pij8RGGoNwYyZe0JxUqZjlTkRc5wGbsvbFRTPikzHlt1ltr5ga+RUxZu7HbC4slWgmDm6WVx5pof8vlFR0k15DF0VJgIsyzFxC1weoPIRwrNohypWUJZt3hclSeq3zTyvAeiaztZ2cnOc3TDLOeXjaIZtftJq6iY02kYSJKEKivhLTL2xMZed7A5ch4xVNFtyZJmJMTCSjBgGAYG2oIOoIyibb301POqJFdQzJPDqFDT6fFnKcrdsSqefT8QJ0MRW42n2k7TFOcNrl8PEWVaxIGQOa/XWJBuD2qJMWkparE9TMbhl1KEYrthLi4INgt8tYq+q2vNWxlqryluo4gLKzEECwBuSD05xy3f27Kl1K1VQDKeUCyLJlKC72sFBa+E3NyTcWGnKCLU7VKmkM1ZJpkmz8GOZMxFOGmYUErmxYg2U6AExSsja4E0mXdCCbAm5tfQnLF8oyt4d5HqDMst51Q+OaRpoFCjwAUAdBfrGoppYSYoGZzDt1JB09Yo3m19rNOwi1sjcYu6zWtisdDhAHpFr9iW7lXIVp8yYBTzkHDlam97h7/dFr5Z3vy50UlU1wMrYgdLkcj6RffY3vUZkv2Kc13lreS345X4f5k/QjpAWdCEIikIQgIA3a5QcuKR1sufxaOa9rNARcCffpgB+Ya3zist7plLN2jMDzFloJ7KZgAwhbZeA71xf1zjYbu9m1XVAs7+zSLnCWUF3HVVBFhzufhzgN1trtnYZUtIP5pz2/wAig/8AlEMrt/8AaVWTLer9nVgR9kihc+Rb3x53iyNn9jNGv8WdUTT/ADKg/wAq3+cbym7M9loLClDeLvMf/wAmNvSApSjWqlrgmPJqpdja7WmL/K30Jt5Ro9rYQFdE7rdDoeYt1HTKL62h2S7NmXKJMkt1lzGy9HxAfCIpvH2UTpUstTOKkAZynUI7Ac1ZLBmt1te0Sf01ExPFlQUlUFcTEbvj8XMdCD9NIs/c7fuYgwo1raymzHp4eIiu5+xQSVxMrrkZcxMLKRy1jHlUzpljzUm2oYeIPTw+MaZnl6PoO0CWw+1lsp6qQw+BtG1l730h/tCPNW/aPNtNtucmve+R/Y+lo2lNvUpyfunxy+ekEX8+99IP7QnyVv2iPz9piomTHlE2yAOhA+kVku2VPMxzkb1rTti5HJlJALDoPzdICfVNZwxYzmJ9P2jTPtCaTk7/ABjS1O8NPmy8SbfMDCZY694uLj0BjS12809riWVkj8nvernvf0keUBKtq0klkPtroARljzfzX7/wEVVMpFV2scShjhOeYvkcPiORMZ5fEbv3idTc3J8esdmKWuuUBhJTlvuk+eS/05D43jAnULg54B5KPoI3bVQOjfIxh1BOZF7+sBq3p15m58MvlHfV7RYSVkohUAd46YjfU2184+GqYaYT6L+to7qWcj34hCWUkHMBiLd0WBzPjlAYuxtqtImBguIZ5NnYke8OhBsQf3jMnEcS6oHxgG+tmtmL8hfP1Md1EtML40dr2++Vt1zGt/ERkmmpGuFnz5eRtiKut7ZA+6bXy5xMc5XPGGvRbFjcAn3mvYAfhHQRxmT1BGCzDmM1+BjKn7CW15dUjAC9nR09NGB56E6eIjDlyOEzq6BzYgFWBGI6EODawP7RUY+V752vnyI8xEnpJ70zyamnfEquGlzLW7496XMX7rWuCujKbgkHKKuW5o3mM42Ox6x5bYVAdJhVJstyVV1JyJOqFTmHGa66QHrDd7a6VdPLqJejrcjmraMp8QbiNjEI7ON3KqgM+TNKtTsVeUQ12DHJgRYcgufh45TeIpCEICr+y3s9SUvtdUBNmMbyQwylpyex++173OgtbUxaEBCAQiPby760VEDx5wxj+zTvP8OXraIBtLtyQEiRSs3Qu9vkqn9YC4IRRLdu1RcWpJeHqS/y6xttl9u8hiBUUzoPxowYf0kA/MwE23z3Fp69cTDhzwO7NUZ+AYfeHz6ERRG9u7tTQvw6lDhJ7kwZq/k3X8pz9I9Dbub2Udct6WejkarezjzQ5+sV9tzatZS1lTS1FOtbRz3Ly0mMuOzKp7pzIQOSua5WyMBTRN+fryPn0McHHI/PP5/78oke/exJdNOTg3VZkoOZZJYymzDpjKjGoOjc87+MX9otk2kVDBbQkeRIHxGnraNlInS1zXAviSP1OsaqeLZg5dekfZVc4yxEeIAv8bXMBu/amOl28lYj42tHXMmjoAfFgfkLmNZZmN2ckdSSflDjKNAT55fIfvAZPtCA+8b+AP1tH16lSLZW6f8A7l84wTXXYKUxEm1lzPp4x2VVOQ2FQQ3MG3d87HXwgOSz1U5/MWP+scp9cBkL/COlJYTMnE3joPIRyacszIg38P3gMebUK3UeNr3+f0jiLn3CCeljeM2Rsrm+Q+f7COUyqRe5LXEedtPVoDHFLMtnhB8M/rH1JBN87+q3+F47qXZ5mE4zb8qiw+POMyTQlMiwUcrjIwGrwWztMHja3zjks+ZyY+tj+ojbGqRNSC3hlG73Y3dlT2E6rnS6Olv7zuqzJvhLUm4HV7eQPIO3cXduor2KqFCgjHNw92UOmvfmHkgtbIsbZGzG7F9nEe/Ug8zxFzPXNCI2+yd7dj08tZFPUSEloLKqXt8QMydSecbmj3oopptLqpJJ5YwD8DnEVk7E2YKaQkhXmTAgsGmticjxaw8tIzo+Ax9gEIQgPjMACSbAZknkIoztE7X3d2ptmmyglWnjV+X2fRfzanllmc7t330ZQNm07WZwDUMNQp92X/i1PhYczFNKmDIa8z0gMjZ1Fxpn2s2zG7EsdCTz8TeJBtLd2cJONGltLuFJXvZkEjLmLKf9Y1OwKMtxXCmyp71ja+JMr6Xsb2jZypjy1BlsVYkkkcxoAw0YZHXrFRGZ7T9GZSPJbH5R0zattJiKw8Bb5iN9Vurm5UK2p5y2Ply/3nHKTs1KyZwqeWsifhusszHZJxHvBGYkq1swpJBsc+oaOmazrMpnaXNXMd7CwI5qw9Yk21d9J1XLlNUAipp7rxlBXiSzbJiMldTcg6G505xqdQcJysxGVl1DC1vSNxsra6rKnSzKR+IAMbe9L/liK73RprzJs+ZMZmwHQYfDEgBJA7pIAGQbUkRgVuzCHmEsnDDuEcK6q9mGQW32ZwtiwtawB8L4NTtVGkhMLrNV8nD2Xh2thKWvfne/pHPZO1psqnqJKkYJyjECLi4YG46MOR1zMEdtVsedKVGeWyrNRZkvELB0bRlPMH6jqIw+HyIsRqDrFpbo7TkV+zhs+umJLmSUxUs9shht7jHQWBC25i1s1vFcYwRrdeR/3+kB0GXMlhXKsFe5UkEBwDY2POxyyj6tK84/Z5KPfY5BfM8/TONlLosapimNMABwylLkrnmM8kBOfd1jX7R2hrLUYQAclyC+H7nU8zFGVScNCZcg2a3emHJm6hfwDwGfjHGZLKiygRpxINsQuts873sMrg+YjY0VWWyma5Waxz8/3gOcijDnvuo8Lxu0opC2CTZZyBNsrEjMZ620vGnm0fOwPiP9IxzIHiPUwG3n7NQ3L1C8P8Km1/OxzjomVshBhlre3oP3jWmnHU/GOayxAdrV0xvdAUR9MtnzdiR8BH2Wsa6fVM7Fb93MZQG63XrKf2uWjyw6E25AFvu30uCbA3PONh2nbFCTUqkWyTrBhlk4XI5Zd5Rc2+8rxDlUqwsbEG4PMEZiLQ2jQzdrbOkVHEwTknWmByVlgMWAYKBoSQb56vnrGJid2W4mNuFbSKY2uVt5xmSqhkzDHLly+HOOyjaVw1bEeIz4SmHLhlfexdcXKNtRbpz5xKyVEwill1JGISzw3A92+RKkkZ62jbDabidoM6mnrjLNJ0MpXte/Ox7uXp5x6H2JtuRVS+JImBxoQCLqehHIx5GmSOl9AbHJgDzyyYeIiSbjb5TqCapuWlnK1+VxlnyiD1NCK9/4sU39zM/qlf8A3hBVAbQrmqJs6qmm8ybMLa6Em49AAAPKPuxNlTKqok08r+JOfCD+EZlnPUBQx8h4xjVBGBAoAyJPne2cWf2CUCtX1M0/2EkIoP52ti88Mu3qYqNhv32eS9n7Ox01VUjBNlNw2ZSrzXZZRfJQVOFjle2Qyis9oVJCH0Gnzyj0NvptLZ9RJekm1coTHK4ESYpmYwQVsovzA1EULtGlEtmViuJb3AN72NsvXx5HpEGpSouOTCODagoSGUhlINirA3BB5EGOyZTK2YNj1Gvr1jGmKy62YeGR+EUWxsibI2xT2nqoqpQtMt3WPSangeY0vfwiEby7pT6TGyrxJeuJRmP5lGnmMvKNJsvaryJqzZZs6nQ3FxzB8DF3bG2uKqnSdhJRwdfeUgkMOjWIOcB51lKOefhEp2DsxJs72OYvDmMQOIriyqcJ929msLnI3z8Ikm/m6qBjOp0sRmy297ncDqPnECpS4nSnRA5DoVDe6xBBA1FxAbjbHEpJs6nxOpDvKYqcN0v3SQDowsbeMayjlEJhtezH6fsI321GerabVTxhaY4GG2EaZKCfDPrGsxSgwRkmqSRiIJva4FwCAOguTAd1CxQNM0IsF8zqfQfqI1e78kzJ6kgsBMRith3jjGWfrGSkxjYBiCLjLXP9xlHfsZMBDqCLMD1JKnXTTLSAkM2XJkMUSWmK5DMbmx54QNLZxH9s0kte+qAKSLgZfDpG+d8V3UgqxJvl6xoK9+KbfdDXJ8gRYeZN/hAdT0ole491IBGcFqfxAGOLjQD0EdbKRqIDMEpWF1NoxiPr8o6WqcAJj7KWwC8+fmcz8zb0gOVXNwoepyEYMsAWUZnnbrGVvBTtL4N8scviAflLMoPrguPAiOvY+zZk6ZLlSrcSa6y0ubd5zhGfK2ZvEE83d7OHrdnTaiWCJqMeGLg8YKFuAp93PFYk5m3LMyHY29qTJ8uTVIEeokrLnqCpQtbCGNv4bGwUyyAVLGMiulbS2YiShPp5ZQqJJSS54ikszSwzPmF71lYE5i1tRHabg1paXNTDNlTMTuHP2kw3vN0FsRvl4Ri19rdabkQ27sNqWqmUxzwt3Sease6b8rgg+sTDZk2e04UktR7QaBqKYQ6kBePczA17d2U50zuIzN7aI1MjjWPEUHFcHFa49SQVt5ER0djlNLNXdnW8yS4k6g4sQxA3ta4RreRhS8WgvTbK1N8dwKetpUlqBLnSUAkTRqthYA295TbMeojzbW0zIzy5qYJiOUmofuuCRfyNjHqip2zLpJJmT2IlqBY2JJYmwVQM2LE5DrFC9qFLONatTOkCR7YjYZdwWCywoBmWyDnuk2Jte3K52ygvAbpH2Ptz1j7FRzr3/hnSy/o3+sTrsf2LSVdfPlVSYzwsaKWYKbOAwYAjFqpscsjEO2/QvKZpUwd6U7K3hnhPzAjju/t6dRz5dXItxJdxY3IYFSpDAEXBB+NukQegdsrIkz5ez9m0ckTTaZPdJaASJANyWNs3e1lHr0ird9tlcGrKHGylEKtY3ZSvKw5EMLDTQRdfZvSyhRpUJM40yp+2nTubzG1HgEzQLyA846N9KZVEpRrOnrLS1wQ7XOTDNRYNmLEX1GoK861kiRwRw1mLUh3uSV4bIfdtc4gw006m8fKfZVQyYsDEdbC2l/eB6ZxadD2cUJqWlzZZ4wUsJWO+JMhjt71rm1zaLAl7nSWlcNk4a4cK8OyOgz0mDManTqYqPMzbNmsC3AmMq5khGZQPFwLAfCLq3U2hLnUsp6cAJbCZdv4bDVcuXO/MEGMzeXatdsaUHapl1klmEtFqAUngkG3fQETQLXN1vaKlotrTqaXMnByJk1i7j7rMxJzXTUn0UiAtqtky2XvZHy09REb3f3a2f7ZinFlmk3kzMVkWYNLr55jO3LpGFuXvTMrahaUSTxSpOJCMIAFyTf3eQ55kRKtpbvlgVnSG8wv1FwfWArffrYz0mJ+LxJLGZiQOhaTUsBditrOj2GF7DunRSLGNU8icJImPcS3HcNgUaxOWuRDIbi1xkYkm2OzepSaJlCjzVN7oFBaXfqNCCLj6RHq3dcyHMuekxHABKsLGxzHKA6ZZUjGHGPEBYA2I5m/K2Xnfwjgdp8NmW11vfyvmfMZ6eESqg3PpnVUWoIm4cTjEMABzFrZs1uQv4258X3UEshsGO5sDmbnla4zPgLmMXvtjOJn0ejw/h/nW274r/U4aKfULMRVVSq27xORZr3v5GOhn+6oFx8APH9ucbqs2fYkNLZD43B+BEYD7OKrYHrmcjn4i4v4xzrr0nieJejV+G61Im1fuiPzHvENezYchmx1J/wB/KOoDnqesc3kFMrfWPqUsx9FKjqQfkP3tHbLwYnyYstMTknRMz58h8frGz2HQtUVEqSvvTZiJfpiYAn0BJ9I5ps02sAbanqT1J/3aN7ulIMjaFC5U51Utf6gR9YqOHbTRCXtThKLIkiQqD8qpYfoY6+zPCNoURb/qFHqUmAf5iIlv/wDQmycNVTVVu68syyfzISw+Ic/CK22VVPKYNLymS3SYl/xS2Dj45xFehe0uU7GV3SUAuGJGEPmLWIN2IY2isZ7tJrZT8BpgmyXSWoODEQQcV/v4baZDPWLL3Z2P/wCpS5W0K+as8soeRJl3EiR44Tm80c2bQjLSOg0tPtSnDTBeVibgzQuFh7wJB/CSNBkbc8jGJpm2Zbi+IxCJ7Lq+I6piaU9QqsFnS8JMvMFgBYMCFyIPIGNJtRp6Vpo8aGXRo7SioCsuIq4W4Fy18wDnzhvLui8mdSia9VOTh2DSAxMo80F7hBjNwcrgk5GJr2ebqmlvPmKvEa5AZmMxWJILNlZmN8jiyvpCmnFei15t2k2xZ0lKSmqqhyWEhGLsveAPMIq4hbGFtbLLzis+2zbsirn0Xs74+HxcRwstsRlkDvAXyRou+hHdxtkANT05nOPNO/8AvGtbtCdUp/ClgSpR/EFuAfUs58iI2wjloRhYvGEVF19uO6jK3t8lMSOAs8Dk2iuR0IspPIhepilCpRrcv1HWPaM+SrqyOoZWBDAi4IORBEUL2idlzU5adTK8ynNyVF2eT6aso65kDXrEVFNxt+6nZj/Zfa07G7yWOV/xKfut46HmNLWXVdp1BWVGziGaUJdQ0ybxQFVPsJqC73wnvOM7/CKLm07pmLkdQPpHxJqnUCA9J76bUo5iy6ulrqQVVMS8o8eXaYp9+S1mzVwLeBsRGDtHtroVkhpSTZk4j+EVKhGtoznKwOV1xRQMtZcdyTFGg+EBu9u7wVFdP9oq3uR7ksZJLXoo5eJOZ+UaTaNZizOg08T1t5W9I4MWYhQCSxACqCST4DmYuHsy7LsDpV7QUBlIaVINjhOoaZ4jknLn0FRvOxLctqOnNVPW1RUAWBFjLlagHozHvH/COUWZHXxh1hxh1iK7I1e2d3aWqwmokpMK3wk3BAPK4INvCNhxh1hxh1gIw/Zvsw/8qPSZNH6PHZK3BoVItLmZaAz57geQaYQp8REj4w6w4w6wEbm7h0jXuJhB/wDka/8AVqfUmMWV2Z7PXRJnrMY/rEu4w6w4w6xJiJ7are1eazhFm7OqE/df+r/SOn/hxTA3E2ePAcL6y7xMOKOsOKOsTZXydPqNXOd859ZRVez+m5vObzMv6SxGTSbj0aTZc7AzPKJMss7EKxFr4AQpNuZGUSHiDrH3iDrFiMdOdrTac2nKN9oe7ft9FMkr/EW0yUfzroP8QuvrHl6pVpcw4gQwNmBFiCD+o0j2LjEVd2pdnHtJarpB9tb7SWLDi2+8Pz25c8uetZVpurvzUUMqfKlDHJnI9lJtwZrLYOp/DexI8OXO+dyWpJtBTpTOkxJcpEyIxKQoBDDVWve4MeWJst5blbMrKbEEWIPQg/pHZR7QMtsct3kv+KUxU/I39II9RbystLLSaQcBnSpbkZYBMcIG8QGZQfOOO8OzVlSWmiqWmdbHizAhTLPCytkVOnXPLO0ed6re6tmyzKm1015ZtdHzBsQRfmcwDrGt2htJpxxT502cRpiZiB5XJsPK0FTvfftPqKySaSUJctTcTpstmIddLC4BRW1tmSMusVtPmCwVfdHz6mOUyYzWUDCOSjn9SYt/st7KmLJV16FQM5chtScrNMHIZXC/G2kEVX/6BVf9PN/7bftCPYcIK63J5RiTpk0aKD6xnwgK03r3Gl1RZ/ZcEw5l5UwISerLbC3na8VzW9lW0AxwSUZeWJ1DfWPSFoYRAeYv+F20x/y8v/uLHfS9me0L/aybL0R0ufU5D4GPSuAdI+cMdICp92t3mpM5VCFe1jMaYrv/AFWyHgLRIhUVX91b/EIm3CHSPnBHSAhnHqfwfOPonVH4fnEx4C9Iezr0gIfxZ/SHFn9DEv8AZl6Q9mXpARDjT+kfONP6RL/ZV6Q9lXpARHjT+hhx5/QxLvZV6Q9lXpARD2if0j77TP6RLvZV6Q9kXpARH2qo/DH32uo/DEt9lXpD2VekBEvban8Hzj4doVX91/mES72VekffZl6QFX7zbC9tznUYL2sJiuFf+q2Y8DeK8rey6uxfZIpXljdQR8Mj8o9Kezr0j6JC9IDzIvZVtP8AupX/AHBGVRdkm0Sw4ioqc8DqW9L5Dzz8o9JCUOkcsIgK83K3Kl0RDrRAzf72ZNV3H8vdAX0AifI7c1t6x22j7AcbnpHyOcIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEIBCEID/9k=">
+        <h4>GPX Demon GR165RR </h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4"></label>
+        </div>
+        <p>Price: 359,999 BDT</p>
+    </div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/thumb/speeder-nsx-165r65f54174920c7.webp">
+        <h4>Speeder NSX 165R</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4"></label>
+            <label for="star4"></label>
+            <label for="star4"></label>
+        </div>
+        <p>Price: 299,900 BDT</p>
+    </div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-r15-v4-bs765228239a19a9.webp">
+        <h4>Yamaha R15 V4 BS7</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+          
+        </div>
+        <p>Price: 650,000 BDT</p>
+    </div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1619676658_12_180929.jpeg">
+        <h4>GPX Demon GR165R</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+          
+        </div>
+        <p>Price: 319,999 BDT</p>
+    </div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/thumb/yamaha-r15-v3-indian-version-d62038cf32435f.webp">
+        <h4> Yamaha R15 V3 Indian Version Dual ABS </h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <p>Price: 499,000 BDT</p>
+</div>
+</div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/new-honda-cbr150r-victory-red-black6523e4bd5c41b.webp">
+        <h4>Honda CBR 150R</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+        </div>
+        <p>Price: 600,000 BDT</p>
+    </div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-r15m-bs7652282624d2e8.webp">
+        <h4>Yamaha R15M BS7</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+        </div>
+        <p>Price: 675,000 BDT</p>
+    </div>
+    <h2 class="naruto">NAKED BIKE</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1618724253_12_508918.jpeg">
+        <H4>KTM Duke 125</H4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>$Price:495,000 BDT</p>
+        </div>
+        <div class="col-4">
+            <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/thumb/tvs-apache-rtr-160-4v-fi65263bac67431.webp">
+            <h4>TVS 4V </h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price: 269,999</p>
+        </div>
+        <div class="col-4">
+            <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/thumb/suzuki-gsx-s1506077ee3da4471.webp "> 
+            <h4>Suzuki GSX-S150</h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label >
+                
+            </div>
+            <p>Price: 350,000</p>
+        </div> 
+        <div class="col-4">
+            <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb150r-exmotion-black60d8325d1ac40.webp">
+            <h4> Honda CB150R Exmotion </h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price: 755000.00</p>
+        </div>
+        <div class="col-4">
+            <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/honda-cb150r-streetfire-black60d8340642dbd.webp">
+            <h4>Honda CB150R Streetfire Competitors</h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price: 380000.00 BDT</p>
+        </div>
+        <div class="col-4">
+            <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/yamaha-fzs-v3-abs-vintage-edition6526357eaafab.webp">
+            <h4>Yamaha FZS V3 ABS Vintage Edition</h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price: 246,800 BDT</p>
+        </div>
+        <div class="col-4">
+            <img src="https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-gixxer-fi-disc-neon-black6523e923dd2f3.webp">
+            <h4>Suzuki Gixxer FI Disc </h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price: 249,950 BDT</p>
+        </div>
+        </div>
+</div>
+
+
+
+<h2 class="naruto">HELMET PRODUCT</h2>
+<div class="row">
+    <div class="col-4">
+        <img src="data:image/jpeg;base64,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">
+        <h4>AGV Pista GP-R</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+        </div>
+        <p>Price: 79200.00 BDT</p>
+    </div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/motorcycle/thumb/agv-k5-fast-46629745dea2ff6.webp">
+        <h4>AGV K5 Fast 46</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+        </div>
+        <p>Price: 52000.00 BDT</p>
+    </div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/motorcycle/thumb/agv-k3-mplk-tartaruga6297439ed5610.webp">
+        <h4>AGV K3 MPLK Tartaruga</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+        </div>
+        <p>Price: 32490.00 BDT</p>
+    </div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/motorcycle/thumb/gsb-venom62984bd1b3ba7.webp">
+        <h4>GSB Venom </h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+        </div>
+        <p>Price: 9990.00 BDT</p>
+    </div>
+    <div class="col-4">
+        <img src="https://www.bikebd.com/den/storage/app/files/shares/images/motorcycle/thumb/gsb-s-361-gt62984a2844429.webp">
+        <h4>GSB S-361 GT</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+        </div>
+        <p>Price: 9990.00 BDT</p>
+    </div>
+    <div class="col-4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ1VxF084h3k5DqL2UVeUf9L9ynYCJPxXang&s" >
+        <h4>Just 1 JGPR Jordi Torres</h4>
+        <div class="rating">
+                    
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+            <label for="star4">&#9733;</label>
+        </div>
+        <p>Price: 25000.00 BDT</p>
+    </div>
+    </div>
+</div>
+
+
+
+
+<h2 class="naruto">BIKE JAKET </h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="https://thewayther.com/wp-content/uploads/2023/10/Black-Red_Front.png">
+            <h4>Autumn Defender Jacket</h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price :1300 BDT</p>
+        </div>
+        <div class="col-4">
+            <img src="https://static-01.daraz.com.bd/p/2f4ddbe2b6eb5b457deb77f31091319c.jpg_300x0q75.webp">
+            <h4>Biker Windbreaker and Dust Coat for Mens </h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price:1000 BDT</p>
+        </div>
+        <div class="col-4">
+            <img src="https://static-01.daraz.com.bd/p/8ef9201a92b6a35f1e59365e5a4be2cd.jpg_300x0q75.webp">
+            <h4>Advanced inspiring - Premium Quality - Speed ​​</h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            
+            <p>Price :700 BDT</p>
+        </div>
+        <div class="col-4">
+            <img src="https://static-01.daraz.com.bd/p/e0aaababab261c17bc0d4af45915114c.jpg_300x0q75.webp">
+            <h4>Men's Ready To Race Enduro Cross Motocross</h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price:3059 BDT</p>
+        </div>
+        <div class="col-4">
+            <img src="https://static-01.daraz.com.bd/p/131c4706cedd841fd696d7772b5c26dc.jpg_300x0q75.webp">
+            <h4>Honda Motorcycle Bike Jacket</h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price:3850 BDT</p>
+        </div>
+        <div class="col-4">
+            <img src="https://bd-live-21.slatic.net/kf/S62682074563543d1a2666cff83d0ee6df.jpg_300x0q75.webp">
+            <h4>High Quality Leather Jackets Men Motorcycle</h4>
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price :7,438 BDT</p>
+        </div>
+        <div class="col-4">
+            <img src="https://static-01.daraz.com.bd/p/2007955665978a1cfe0df2032067647c.jpg_300x0q75.webp">
+            <h4>Mens Windbreaker Jackets Waterproof </h4>
+            
+            <div class="rating">
+                        
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+                <label for="star4">&#9733;</label>
+            </div>
+            <p>Price : 2600 BDT</p>
+        </div>
+          <!-------- Footer --------->
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3> Dwonload our app</h3>
+                <p>Dwonload app for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="https://i.pinimg.com/564x/25/60/bb/2560bbc828e28e3bede2f9023458b89e.jpg">
+                    <img src="https://i.pinimg.com/564x/20/8e/c3/208ec34130feffa6c2905e9c3575ae8c.jpg">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="logo.png.png">
+                <p></p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"></p>
+    </div>
+</div>
+
+               
+<!-------- js for toggle menu --------->
+<script>
+    var MenuItems= document.getElementById("MenuItems")
+    MenuItems.style.maxHeight ="0px";
+
+    function menutoggle(){
+        if (MenuItems.style.maxHeight =="0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+</body>
+</html>
